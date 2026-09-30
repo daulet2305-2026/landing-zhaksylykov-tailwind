@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Современная стоматологическая клиника: качественное лечение, опытные врачи и запись на прием.">
+    <title>Стоматологическая клиника — Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">ДентаЛюкс</div>
+            <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button>
+            <ul class="nav-list">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#doctors">Врачи</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Здоровая и красивая улыбка</h1>
+            <h2>О нашей клинике</h2>
+            <p>Мы предоставляем полный спектр стоматологических услуг с использованием современного оборудования и безопасных материалов.</p>
+            <img src="https://medstandart.expert/wp-content/uploads/2018/04/Preciso_B_-1024x529.jpg" alt="Интерьер стоматологической клиники" style="max-width:100%; border-radius:6px; margin-top:15px;">
+        </section>
+
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <div class="cards-grid">
+                <article>
+                    <h3>Лечение зубов</h3>
+                    <p>Безболезненное лечение кариеса и пульпита на новейшем оборудовании.</p>
+                </article>
+                <article>
+                    <h3>Имплантация</h3>
+                    <p>Современные зубные импланты с пожизненной гарантией приживления.</p>
+                </article>
+                <article>
+                    <h3>Отбеливание</h3>
+                    <p>Профессиональная чистка и безопасное отбеливание зубов за один визит.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="doctors">
+            <h2>Наши врачи</h2>
+            <div class="cards-grid">
+                <article>
+                    <h3>Алексей Смирнов</h3>
+                    <p>Главный врач, стоматолог-хирург с опытом работы более 15 лет.</p>
+                </article>
+                <article>
+                    <h3>Елена Васильева</h3>
+                    <p>Стоматолог-терапевт, специалист по художественной реставрации зубов.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакты и Запись на прием</h2>
+            <p>Адрес: ул. Абая, 15 | Телефон: +7 (777) 123-45-67</p>
+            
+            <form action="#" method="POST">
+                <div>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Сообщение / Запись:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Стоматологическая клиника ДентаЛюкс. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        toggleButton.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
